@@ -1,0 +1,127 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: gloureirog@indracompany.com"
+      },
+      {
+        "line": 2,
+        "value": "# encoding: iso-8859-1"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 11,
+        "name": "Registro de tarjeta",
+        "description": "",
+        "id": "registro-de-tarjeta---website-banco-ripley;registro-de-tarjeta",
+        "after": [
+          {
+            "result": {
+              "duration": 260086315,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseTest.finaliza()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9439198170,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "CT01 - Acceder la Página principal",
+            "match": {
+              "location": "CadastroCartaoTest.acessarPaginaCadastro()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7060235082,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "CT01 - Ir a creditos",
+            "match": {
+              "location": "CadastroCartaoTest.irCredito1()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4579189636,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "CT01 - Ir a creditos2",
+            "match": {
+              "location": "CadastroCartaoTest.irCredito2()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4559271873,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "CT01 - Ir a creditos3",
+            "match": {
+              "location": "CadastroCartaoTest.irCredito3()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4650106100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "CT01 - Ir a creditos4",
+            "match": {
+              "location": "CadastroCartaoTest.irCredito4()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5596237408,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "CT01 - Ir a creditos5",
+            "match": {
+              "location": "CadastroCartaoTest.irCredito5()"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@CT001"
+          }
+        ]
+      }
+    ],
+    "name": "Registro de Tarjeta - Website Banco Ripley",
+    "description": "\r\nYo como Analista de pruebas\r\nQuiero registrar una tarjeta",
+    "id": "registro-de-tarjeta---website-banco-ripley",
+    "keyword": "Feature",
+    "uri": "CadastroCartao.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@ProjetoBancoRipley"
+      }
+    ]
+  }
+]

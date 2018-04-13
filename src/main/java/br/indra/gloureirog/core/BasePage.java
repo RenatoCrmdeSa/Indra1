@@ -4,14 +4,20 @@ import static br.indra.gloureirog.core.DriverFactory.getDriver;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 
 public class BasePage {
 	
@@ -30,12 +36,34 @@ public class BasePage {
 		WebDriverWait wait = new WebDriverWait(getDriver(), 60);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))).sendKeys(texto);
 	}
-	
+	public void scroll(String id){
+		WebElement element = DriverFactory.getDriver().findElement(By.id(id));
+		((JavascriptExecutor) DriverFactory.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	}
 	public void clicarWaitId(String id) {
 		WebDriverWait wait = new WebDriverWait(getDriver(), 60);
-		wait.until(ExpectedConditions.elementToBeClickable(By.id(id))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
+		clicarBotao(id);
 	}
-	
+	public void clicarElementoPorId(String elemento) {
+		DriverFactory.getDriver().findElement(By.id(elemento)).click();
+	}
+	public void mouseHoverXPath(String xpath) {
+		Actions action = new Actions(getDriver());
+		WebElement we = getDriver().findElement(By.xpath(xpath));
+		action.moveToElement(we).build().perform();
+	} 
+	public void mouseHoverId(String id) {
+		Actions action = new Actions(getDriver());
+		WebElement we = getDriver().findElement(By.id(id));
+		action.moveToElement(we).build().perform();
+	} 
 	public void clicarWaitXpath(String xpath) {
 		WebDriverWait wait = new WebDriverWait(getDriver(), 60);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))).click();
